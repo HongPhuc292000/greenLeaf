@@ -1,0 +1,83 @@
+// container
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+
+// header-content
+.content__heading{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.sub-content__heading{
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.content__des{
+    font-size: 1rem;
+}
+
+.sub-content__des{
+    font-size: 0.875rem;
+}
+
+// button
+.btn{
+    --btn-height: 42px;
+    background-color: $primary-color;
+    color: $bg-primary;
+    font-size: 0.875rem;
+    font-weight: 700;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    padding: 0 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all ease-in .1s;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn.btn__white{
+    background-color: $bg-primary;
+    color: $primary-color;
+}
+
+.btn.btn__white:hover{
+    background-color: $primary-color;
+    color: $bg-primary;
+    opacity: 1;
+}
+
+.btn.btn__pr{
+    color: $primary-color;
+    background-color: transparent;
+}
+
+.btn.btn__pr:hover{
+    color: $bg-primary;
+    background-color: $primary-color;
+    opacity: 1;
+}
+
+.btn.btn__rim{
+    border: 1px solid currentColor;
+}
+
+.btn.btn__rim:hover{
+    border-color: $primary-color;
+}
+

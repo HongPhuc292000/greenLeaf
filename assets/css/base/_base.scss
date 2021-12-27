@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    --header-height: 88px;
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $text;
+    line-height: 1.4;
+}
+
+ul,li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
