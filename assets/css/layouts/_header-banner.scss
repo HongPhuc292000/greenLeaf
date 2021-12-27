@@ -7,7 +7,7 @@ header{
     line-height: var(--header-height);
     background-color: $bg-primary;
     box-shadow: 0 1px 8px 4px rgba(0, 0, 0, 0.05);
-    z-index: 1;
+    z-index: 10;
     .header__container{
         justify-content: space-between;
         align-items: center;
@@ -65,15 +65,14 @@ header{
 }
 
 .modal{
-    display: block;
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
-    z-index: -10;
-    transition: all linear .3s;
+    animation: fadeIn linear .15s;
+    z-index: 12;
 }
 
 .modal__overlay{
@@ -92,14 +91,15 @@ header{
     right: 0;
     transform-origin: right center;
     transform: scaleX(0);
-    transition: all linear .3s;
+    will-change: transform;
+    transition: all .3s linear;
     z-index: 1;
     .close__btn{
         position: absolute;
-        top: 4px;
-        left: 20px;
+        top: 0;
+        right: 12px;
         transform: rotate(45deg);
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .m-nav{
@@ -108,9 +108,9 @@ header{
 
     .m-nav__item{
         a{
-            font-size: 1rem;
+            font-size: 1.5rem;
             display: block;
-            padding: 8px 0 8px 36px;
+            padding: 14px 0 14px 36px;
             transition: all linear .1s;
             &:hover{
                 background-color: $primary-color;
@@ -137,7 +137,7 @@ header{
     position: relative;
     height: 560px;
     margin-top: var(--header-height);
-    background-image: url('../../../assets/img/banner.png');
+    background-image: url('../../../assets/img/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -149,6 +149,7 @@ header{
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 1;
 }
 
 .banner__heading{
@@ -165,3 +166,12 @@ header{
         margin-right: 24px;
     }
 } 
+
+.banner__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.8);
+}

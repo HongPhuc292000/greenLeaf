@@ -4,12 +4,15 @@ var closeModal = document.querySelectorAll('.close-modal');
 
 mMenuBtn.onclick = ()=>{
     modal.classList.add('fadeIn');
-    modal.lastElementChild.classList.add('fadeInRight');
+    setTimeout(function(){
+        modal.lastElementChild.classList.add('fadeInRight');
+    },0);
 }
 
 closeModal.forEach(item =>{
     item.onclick = ()=>{
         modal.classList.remove('fadeIn');
         modal.lastElementChild.classList.remove('fadeInRight');
+
     }
 })
